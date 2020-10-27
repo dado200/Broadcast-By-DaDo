@@ -53,7 +53,7 @@ const cooldown = new Set()
 
         message.guild.members.filter(m => m.roles.find(r => r.name.toLowerCase().includes(args[0])) || m.roles.find(r => r.id === args[0])).forEach(g => {
 
-          g.send(args2).then(() => { //!Baron#0001
+          g.send(args2).then(() => { //DaDo
 
             successCount++;
 
@@ -84,7 +84,7 @@ const cooldown = new Set()
           });
 
         });
-      }) //!Baron#0001
+      }) //DaDo
 
 
     }
@@ -117,7 +117,7 @@ const cooldown = new Set()
             successCount++;
 
             msgCount++;
-            let embed = new Discord.RichEmbed() //!Baron#0001
+            let embed = new Discord.RichEmbed() //DaDo
             .setTitle(`**Brodcast Info**`)
             .setDescription(`- **Online Memebrs**: `+'`'+`${message.guild.members.filter(m=>m.presence.status == 'online').size}`+'`\n'+
             `- Sent messages: `+'`'+`${msgCount}`+'`'+`${sent}\n`+
@@ -153,7 +153,7 @@ const cooldown = new Set()
           message.delete(5000)
           })
           }
-          cooldown.add(message.author.id); //!Baron#0001
+          cooldown.add(message.author.id); //DaDo
           setTimeout(() => {
             cooldown.delete(message.author.id);
 
@@ -185,7 +185,7 @@ const cooldown = new Set()
 
           }).catch(e => {
 
-            errorCount++; //!Baron#0001
+            errorCount++; //DaDo
 
             msgCount++;
             let embed = new Discord.RichEmbed()
@@ -199,7 +199,7 @@ const cooldown = new Set()
 
           });
 
-        }); //!Baron#0001
+        }); //DaDo
       })
       }
       if(args[0] === 'idle'){
@@ -210,7 +210,7 @@ const cooldown = new Set()
           message.delete(5000)
           })
           }
-          cooldown.add(message.author.id); //!Baron#0001
+          cooldown.add(message.author.id); //DaDo
           setTimeout(() => {
             cooldown.delete(message.author.id);
 
@@ -221,7 +221,7 @@ const cooldown = new Set()
             `- Sent messages: `+'`'+`${msgCount}`+'`'+`${sent}\n`+
             `- Received messages: `+'`'+`${successCount}`+'`'+`${rcv}\n`+
             `- Non-received messages: `+'`'+`${errorCount}`+'`'+`${cant}`)
-            .setFooter(client.user.username, client.user.avatarURL) //!Baron#0001
+            .setFooter(client.user.username, client.user.avatarURL)//DaDo
       message.channel.send(embed).then(msg => {
 
         message.guild.members.filter(m => m.presence.status === 'idle').forEach(g => {
@@ -240,7 +240,7 @@ const cooldown = new Set()
             .setFooter(client.user.username, client.user.avatarURL)
             msg.edit(embed);
 
-          }).catch(e => { //!Baron#0001
+          }).catch(e => { //DaDo
 
             errorCount++;
 
@@ -269,7 +269,7 @@ const cooldown = new Set()
           }
           cooldown.add(message.author.id);
           setTimeout(() => {
-            cooldown.delete(message.author.id); //!Baron#0001
+            cooldown.delete(message.author.id); //DaDo
 
           }, 7200000);
       let embed = new Discord.RichEmbed()
@@ -288,7 +288,7 @@ const cooldown = new Set()
             successCount++;
 
             msgCount++;
-            let embed = new Discord.RichEmbed() //!Baron#0001
+            let embed = new Discord.RichEmbed() //DaDo
             .setTitle(`**Brodcast Info**`)
             .setDescription(`- **Offline Memebrs**: `+'`'+`${message.guild.members.filter(m=>m.presence.status == 'offline').size}`+'`\n'+
             `- Sent messages: `+'`'+`${msgCount}`+'`'+`${sent}\n`+
@@ -370,7 +370,7 @@ const cooldown = new Set()
 
             });
 
-          });//!Baron#0001
+          });//DaDo
         })
       }
       if(args[0] === 'help'){
@@ -400,7 +400,7 @@ const cooldown = new Set()
        [offline]**`, true)
        message.channel.send(embed)
       }
-      break;  //!Baron#0001
+      break;  //DaDo
     }
   })
 client.login('BOT_TOKEN');
